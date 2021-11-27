@@ -1,0 +1,241 @@
+*{
+    margin: 0px;
+    padding: 0px
+    
+}
+html{
+    scroll-behavior: smooth;
+}
+/* CSS variable */
+:root{
+    --navbar-height: 59px
+}   
+
+
+
+/* Navigation Bar : Logo and Image */
+#logo{
+         margin: 3px 23px;
+}
+#logo img{
+    /* border-radius: ; foe image  */
+    border-radius: 81px;
+    margin: 3px 6px;
+    height: 42px;
+}
+
+/* navigatio bar  */
+#navbar {
+    font-family: 'Girassol', cursive;
+  top:0px;
+    /* position: relative; is black line come on navbar */
+    position: relative;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; is centre the logo and nav  */
+}
+    /* Navigation Bar : List Styling */
+    #navbar ul{
+        /* all  Navigation Bar : are arrange in row  */
+      display: flex;
+
+    }
+    /* After #navbar ul li a we use #navbar::before   */
+    #navbar::before{
+        top: 0px;
+        left: 0px;
+        content: "";
+        background-color: black;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        /* black background show content we use z-index: -1; */
+        z-index: -1;
+        opacity: 1;
+    }
+    #navbar ul li{
+     /* list-style: none; is used to remove dots ... are remove  */
+     list-style: none;
+     font-size: 1.3em;
+    }
+    #navbar ul li a{
+        color: white;
+        /* display: block; by default inline  */
+        display: block; 
+        padding: 3px 22px;
+        border-radius: 45px;
+        /* text-decoration: none; is remove line  */
+        text-decoration: none;
+    }
+    #navbar ul li a:hover{
+        color: rgb(6, 73, 6);
+        background-color: rgb(201, 219, 39);
+    }
+    /* Home Section */
+    #home{
+        /* all text in row */
+        display: flex;
+        flex-direction: column;
+        padding: 3px 200px;
+        /* center the content */
+        justify-content: center;
+        /* align-items: center; is button text equal to border and fix centre  */
+        align-items: center;
+        height: 450px;
+    }
+    /* pseudo selector */
+    #home::before{
+        content: "";
+        position: absolute;
+        /* imp  background: url('../imgfood/food_wallper.jpg') no-repeat center center/cover; */
+        top: 0px;
+        left: 0px;
+        background: url('../imgfood/food_wallper.jpg') no-repeat center center/cover;
+        height: 85%;
+        width: 100%;
+        z-index: -1;
+        opacity: 0.90;
+    }
+    #home h1{
+        font-size: 40px;
+        font-family: 'Goblin One', cursive;
+        color: red;
+        text-align: center;
+        
+    }
+    #home p{
+        font-family: 'Girassol', cursive;
+        color:white;
+        text-align: center;
+        font-size: 1.5rem;
+        
+    }
+    /* Section Section */
+     #services{
+         display: flex;
+         margin: 34px;
+     }
+     #services .box{
+         border: 2px solid red;
+         /* after three boxs select */
+         padding: 26px;
+         margin: 2px 6px;
+         border-radius: 39px;
+         background-color: rgb(180, 219, 121);
+     
+     }
+     #services .box img{
+        border-radius: 45px;
+        /* border: 2px solid green; */
+        /* height for image pizza */
+        height: 160px;
+        /*imp margin: auto; is work with display: block; 
+        margin: auto is not work without display :block  */
+        margin: auto;
+        display: block;
+     }
+     #services .box p{
+         color: white;
+         font-family: 'Girassol', cursive;
+        
+
+     }
+
+
+    /* Utility Classes */
+    .h-primary{
+        font-family: 'Girassol', cursive;
+        font-size: 3rem;
+        padding: 12px;
+    }
+    /* headind for food ordering both .h-secondary and .centre */
+    .h-secondary{
+        font-family: 'Girassol', cursive;
+        font-size: 2rem;
+        padding: 12px;
+    }
+    .centre{
+        text-align: center;
+    }
+/* Button */
+.btn{
+    color: white;
+    padding: 6px 40px;
+    border: 2px solid white;
+    background-color: brown;
+    margin: 12px;
+    font-size: 1.5rem;
+    border-radius: 9px;
+    cursor: pointer;
+}
+/* Clinent Section */
+#client-section{
+    position: relative;
+    height: 344px;
+}
+#client-section::before{
+    content: "";
+    position: absolute;
+    background: url("../imgfood/background-img.jpg");
+    width: 100%;
+    height: 84%;
+    z-index: -1;
+    opacity: 0.7;
+
+}
+#client{
+display: flex;    
+text-align: center;
+justify-content: center;
+}
+#client img{
+    border-radius: 30px;
+    height: 60px;
+} 
+.client-item{
+    
+    padding: 12px;
+    margin: 12px;
+}
+/* Contact Section */
+#contact{
+    top: -57px;
+    position: relative;
+    
+}
+#contact::before{
+    content: "";
+    position: absolute;
+    background: url("../imgfood/typing_image.jpg") no-repeat center center/cover;
+    height: 112%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.8;
+}
+#contact-box {
+    display: flex;
+    justify-content: center;
+    /* centre the top box and bottom box in centre */
+    align-items: center;
+    padding-bottom: 34px;
+}
+#contact-box form{
+    font-family: 'Goblin One', cursive;
+    width: 40%;
+}
+#contact-box label{
+font-size: 0.9rem;
+}
+
+#contact-box input,
+#contact-box textarea{
+    width: 100%;
+    padding: 0.4rem;
+}
+
+/* Footer */
+footer{
+    background-color: black;
+    color: white;
+    padding: 7px 23px;
+}
